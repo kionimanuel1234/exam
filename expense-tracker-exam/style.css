@@ -1,0 +1,88 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+}
+
+/* Budget display */
+.budget-box {
+    background-color: #e8f5e9;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Remaining amount */
+#balance {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Form layout */
+form {
+    display: grid;
+    gap: 10px;
+}
+
+/* Inputs and select */
+input,
+select,
+button {
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Expense list */
+#expenseList {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual expense */
+#expenseList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+/* Total section */
+.total-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eee;
+    font-size: 18px;
+}
