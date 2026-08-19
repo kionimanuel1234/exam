@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page display properly on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Filter & Live Search</title>
+
+    <!-- Connects the HTML page to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main heading for the website -->
+    <header class="page-header">
+        <h1>Product Filter & Live Search</h1>
+        <p>Search, filter and sort products easily.</p>
+    </header>
+
+    <!-- Search and filter controls -->
+    <main>
+
+        <section class="controls">
+
+            <!-- Search input -->
+            <div class="control-group">
+                <label for="searchInput">Search Products</label>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+            </div>
+
+            <!-- Category filter -->
+            <div class="control-group">
+                <label for="categoryFilter">Category</label>
+
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Computers">Computers</option>
+                    <option value="Accessories">Accessories</option>
+                </select>
+            </div>
+
+            <!-- Minimum price -->
+            <div class="control-group">
+                <label for="minPrice">Minimum Price</label>
+
+                <input
+                    type="number"
+                    id="minPrice"
+                    placeholder="Min price"
+                    min="0"
+                >
+            </div>
+
+            <!-- Maximum price -->
+            <div class="control-group">
+                <label for="maxPrice">Maximum Price</label>
+
+                <input
+                    type="number"
+                    id="maxPrice"
+                    placeholder="Max price"
+                    min="0"
+                >
+            </div>
+
+            <!-- Sorting options -->
+            <div class="control-group">
+                <label for="sortOrder">Sort By</label>
+
+                <select id="sortOrder">
+                    <option value="default">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-az">Name: A to Z</option>
+                    <option value="name-za">Name: Z to A</option>
+                </select>
+            </div>
+
+        </section>
+
+        <!-- Shows how many products are currently displayed -->
+        <p id="resultCount" class="result-count">
+            0 products found
+        </p>
+
+        <!-- JavaScript will create the product cards inside this section -->
+        <section id="productGrid" class="product-grid"></section>
+
+        <!-- Displayed when the filters return zero products -->
+        <div id="emptyState" class="empty-state hidden">
+            <h2>No products found</h2>
+            <p>Try changing your search or filters.</p>
+        </div>
+
+    </main>
+
+    <!-- Connects the HTML page to our JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

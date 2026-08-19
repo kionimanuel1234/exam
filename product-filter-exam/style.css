@@ -1,0 +1,159 @@
+/* Makes width and height calculations easier to control */
+* {
+    box-sizing: border-box;
+}
+
+/* Basic styling for the whole page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+/* Main heading area */
+.page-header {
+    text-align: center;
+    padding: 40px 20px 25px;
+}
+
+.page-header h1 {
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #666;
+}
+
+/* Search and filter section */
+.controls {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 20px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+/* Places the label above each input */
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Gives the inputs and dropdowns a clean appearance */
+.control-group input,
+.control-group select {
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 14px;
+    background: white;
+}
+
+/* Result count text */
+.result-count {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 20px;
+
+    font-weight: bold;
+}
+
+/* Product grid */
+.product-grid {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+/* Individual product card */
+.product-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Product name */
+.product-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* Product category */
+.product-category {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Product price */
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin: 12px 0;
+}
+
+/* Stock information */
+.stock {
+    font-size: 14px;
+}
+
+/* Message shown when no products match */
+.empty-state {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 40px auto;
+    padding: 40px;
+
+    text-align: center;
+
+    background: white;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Used by JavaScript to hide the empty state */
+.hidden {
+    display: none;
+}
+
+/* Tablet-sized screens */
+@media (max-width: 900px) {
+
+    .controls {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
